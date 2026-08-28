@@ -516,17 +516,59 @@ border-radius: 5%;
     
     img{
     border-radius: $border-radius1;
-    height: 10rem;
-    width: 10rem;
+    height: 15rem;
+    width: 15rem;
+
+    @include mobile1{
+        height: 10rem;
+        width: 10rem;
+    }
 }
 
     h2{
-    font-size: $med-textoinicio;
+    font-size: $med-terciaria;
+    font-weight: bolder;
+    color: rgb(46, 43, 43) ;
+
+    @include mobile1{
+        font-size: $med-secundaria;
+    }
 }
+
+    ul{ 
+        color: rgb(2, 88, 22);
+    }
 
     p{
     font-size: $med-secundaria;
+    text-align: $text-align;
+    font-style: oblique;
 }
+
+    a{
+        text-decoration: none;
+        font-size: $med-terciaria;
+        font-weight: bolder;
+        color: rgb(46, 43, 43);
+
+        @include mobile1{
+        font-size: $med-secundaria;
+    }
+
+        &:hover{
+            color: rgb(2, 88, 22);
+        }
+    }
+
+    .enlace{
+        font-size: $med-terciaria;
+        font-weight: bolder;
+        color: rgb(46, 43, 43);
+
+        @include mobile1{
+        font-size: $med-secundaria;
+    }
+    }
 }
 
 
@@ -545,6 +587,10 @@ border-radius: 5%;
     @include mobile1{
         font-size: $med-cuarta;
     }
+
+    &:hover{
+            color: whitesmoke;
+        }
     }
 
     .text{
@@ -554,7 +600,13 @@ border-radius: 5%;
     @include mobile1{
         font-size: $med-terciaria;
     }
+    
+    &:hover{
+            color: whitesmoke;
+        }
     }
+    
+    
 }
 
 .fotofinal{

@@ -19,14 +19,11 @@
 
     &:hover {
     background-color: $color-readhover;
+    transform: translateX(0.5rem);
     }
 }
 
 .read-more-btn span {
 margin-left: $med-primaria;
 transition: transform 0.2s ease;
-
-        &:hover span {
-            transform: translateX(0.5rem);
-            }
         }

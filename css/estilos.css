@@ -135,14 +135,12 @@ header {
 }
 .read-more-btn:hover {
   background-color: #007bff;
+  transform: translateX(0.5rem);
 }
 
 .read-more-btn span {
   margin-left: 0.5rem;
   transition: transform 0.2s ease;
-}
-.read-more-btn span:hover span {
-  transform: translateX(0.5rem);
 }
 
 h2 {
@@ -627,14 +625,56 @@ h2 .merriweather {
 }
 .servicio img {
   border-radius: 50%;
-  height: 10rem;
-  width: 10rem;
+  height: 15rem;
+  width: 15rem;
+}
+@media (max-width: 575px) {
+  .servicio img {
+    height: 10rem;
+    width: 10rem;
+  }
 }
 .servicio h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: rgb(46, 43, 43);
+}
+@media (max-width: 575px) {
+  .servicio h2 {
+    font-size: 1rem;
+  }
+}
+.servicio ul {
+  color: rgb(2, 88, 22);
 }
 .servicio p {
   font-size: 1rem;
+  text-align: center;
+  font-style: oblique;
+}
+.servicio a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: rgb(46, 43, 43);
+}
+@media (max-width: 575px) {
+  .servicio a {
+    font-size: 1rem;
+  }
+}
+.servicio a:hover {
+  color: rgb(2, 88, 22);
+}
+.servicio .enlace {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: rgb(46, 43, 43);
+}
+@media (max-width: 575px) {
+  .servicio .enlace {
+    font-size: 1rem;
+  }
 }
 
 /*page4*/
@@ -654,6 +694,9 @@ h2 .merriweather {
     font-size: 2rem;
   }
 }
+.page4 .item:hover {
+  color: whitesmoke;
+}
 .page4 .text {
   font-size: 2rem;
   color: rgb(83, 229, 117);
@@ -662,6 +705,9 @@ h2 .merriweather {
   .page4 .text {
     font-size: 1.5rem;
   }
+}
+.page4 .text:hover {
+  color: whitesmoke;
 }
 
 .fotofinal {
