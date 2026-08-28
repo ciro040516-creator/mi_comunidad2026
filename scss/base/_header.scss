@@ -1,0 +1,15 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+@use "../componentes/navs" as *;
+
+
+header{
+    background-image: linear-gradient(to top, #b3ffab 0%, #12fff7 100%);
+    padding: $med-cuarta;
+    
+    @include mobile1{
+        padding: auto;
+    }
+}
+

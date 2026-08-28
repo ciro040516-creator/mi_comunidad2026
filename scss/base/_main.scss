@@ -1,0 +1,574 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+@use "../componentes/navs" as *;
+@use "../componentes/cards" as *;
+@use "../componentes/botones" as *;
+
+
+h2{
+    font-size: $med-terciaria;
+    text-align: $text-align;
+    text-decoration: $text-deco;
+    font-family: $font-title;
+    margin: $med-primaria;
+
+    @include mobile{
+        font-size: $med-secundaria;
+    }
+    @include mobile1{
+        font-size: $med-varias;
+    }
+
+    .merriweather{
+    font-family: $font-title;
+}
+}
+
+.fondoinicio{
+    background-image: url(../img/lossarmientos.webp);
+    background-repeat: no-repeat;
+    background-size: $object-fit-size;
+    background-position: center center;
+    /*background-attachment: fixed;*/
+    width: 100%;
+    height: 90vh;
+    position: $position;
+
+    @include mobile{
+        height: 60vh;
+    }
+
+.title{
+    font-size: $med-title;
+    text-align: $text-start;
+    font-weight: $font-weight;
+    margin: 0;
+    padding: $med-cuarta;
+    color: $color-title;
+    font-family: $font-texto;
+
+    @include mobile{
+        font-size: $med-cuarta;
+    }
+}
+
+.textoinicio{
+    font-size: $med-textoinicio;
+    font-weight: $font-weight;
+    color: $color-textoinicio;
+    text-align: $text-start;
+    gap: $med-secundaria;
+    margin: $med-primaria;
+    padding: $med-primaria;
+    max-width: $width-textoinicio;
+    font-family: "Open Sans", sans-serif;
+
+    @include mobile{
+        font-size: $med-secundaria;
+        font-weight: lighter;
+        max-width: 25rem;
+    }
+
+    @include mobile1{
+        font-size: $med-varias;
+        font-weight: normal;
+    }
+
+    .opensans{
+    font-family: $font-texto;
+}
+}
+
+.textinferior{
+    position: absolute;      /* Se posiciona respecto a .fondoinicio */
+    bottom: $med-secundaria;            /* Espacio desde el borde inferior de la foto */
+    left: $med-secundaria;              /* Espacio desde el borde izquierdo */
+    font-size: $med-secundaria;
+    color: $color-textinferior;
+    text-align: $text-start;
+    margin: 0;               /* Quitamos el margin-top porque ya usamos bottom */
+    display: block;
+    font-family: $font-texto;
+
+    @include mobile1{
+        font-size: $med-primaria;
+    }
+}
+}
+
+
+.title2{
+    font-size: $med-title2;
+    margin: $med-secundaria;
+    padding: $med-cuarta;
+    color: $color-title2;
+    font-family: $font-title;
+
+    @include mobile{
+        font-size: $med-cuarta;
+    }
+
+    @include mobile1{
+        font-size: $med-terciaria;
+    }
+}
+
+.textpage1{
+    font-size: $med-terciaria;
+    text-align: $text-align;
+    gap: $med-secundaria;
+    margin: $med-primaria;
+    padding: $med-primaria;
+    font-family: $font-texto;
+
+    @include mobile{
+        font-size: $med-secundaria;
+    }
+}
+
+.bootstrap{
+    max-width: 70rem;
+    margin: auto;
+
+    @include mobile{  //medida 767px
+        max-width: 35rem;
+    }
+    @include mobile1{  //medida 575px
+        max-width: 25rem;
+        margin: 1rem;
+    }
+
+        img{
+        width: 100%;
+        height: 40rem; 
+        object-fit: cover;
+
+        @include mobile{
+            height: 20rem;
+            object-fit: cover;
+        }
+        }
+
+        p{
+
+        @extend %cortesia-p;
+
+        }
+}
+
+
+/*page2*/
+
+.contenedor1{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas: "seccion1 seccion2 seccion3";
+    width: 100%;
+    height: 70vh;
+    position: $position;
+    margin: $med-primaria;
+    gap: $med-primaria;
+
+    @include mobile{
+        grid-template-columns: 1fr; 
+        grid-template-areas: "seccion1"
+                            "seccion2"
+                            "seccion3";
+        margin: auto;
+        padding: $med-primaria;
+        width: 80%;
+        height: auto;
+    }
+
+        .seccion1{
+            grid-area: seccion1;
+            background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+            border-radius: 20%;
+            padding: $med-terciaria;
+
+            @include flex1( column, space-between, center);
+
+            @include mobile{
+                padding: $med-primaria;
+            }
+            }
+
+        .seccion2{
+            grid-area: seccion2;
+            background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+            border-radius: 20%;
+            padding: 1.5rem;
+
+            @include flex1( column, space-between, center);
+
+            @include mobile{
+                padding: $med-primaria;
+            }
+            }
+
+        .seccion3{
+            grid-area: seccion3;
+            background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+            border-radius: 20%;
+            padding: 1.5rem;
+
+            @include flex1( column, space-between, center);
+
+            @include mobile{
+                padding: $med-primaria;
+            }
+            }
+
+.fotoseccion{
+    border-radius: $border-radius;
+    width: 25vw;
+    height: 30vh;
+    background-size: $object-fit-size;
+
+    @include mobile{
+        width: 35vw;
+        height: 20vh;
+    }
+
+    @include mobile1{
+        width: 35vw;
+        height: 15vh;
+    }
+}
+
+.textseccion{
+    font-size: $med-varias;
+    font-family: $font-texto;
+    text-align: $text-align;
+    margin: 0.3rem;
+
+    @include mobile1{
+        font-size: 0.6rem;
+    }
+}
+
+.link{
+    @extend %link-enlace;
+}
+
+.cortesia{
+    margin-top: auto;
+    font-size: 0.6rem;
+    text-align: $text-end;
+    font-family: $font-texto;
+
+    @include mobile1{
+        font-size: $med-primaria;
+    }
+}
+}
+
+//contenedor2- page2
+
+.cajas{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "cajaY cajaX";
+    width: 100%;
+    position: $position;
+    gap: $med-primaria;
+    align-items: $align-items;
+    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+
+    @include mobile1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: $med-primaria;
+    }
+
+.cajaX{
+    grid-area: cajaX;
+
+    @include flex1(column, center, center);
+
+    height: 100%; 
+    padding: $med-secundaria;
+
+    .textocaja{
+    font-size: $med-textoinicio;
+    font-family: $font-texto;
+    margin: $med-primaria;
+
+    @include mobile1{
+        font-size: $med-varias;
+    }
+    }
+
+    p{
+
+        @extend %cortesia-p;
+
+        }
+
+        .link{
+            @extend %link-enlace;
+        }
+}
+
+.cajaY{
+    grid-area: cajaY;
+
+    @include flex1(column, center, center);
+
+    height: 100%;
+    padding: $med-secundaria;
+}
+
+.fotocaja{
+    max-width: 100%;  /* Evita que se salga de los costados */
+    max-height: 80vh; /* Ajustá este porcentaje según el alto que quieras que ocupe */
+    object-fit: contain;
+    border-radius: $border-radius;
+
+    @include mobile1{
+        width: 100%;
+        height: 20vh;
+        object-fit: $object-fit-size;
+    }
+}
+}
+
+
+
+.contenedor2{
+    display: grid;
+    grid-template-rows: 1fr, repeat(5, 1fr) ;
+    grid-template-areas:"caja1"
+                        "caja2"
+                        "caja3"
+                        "caja4"
+                        "caja5"
+                        "caja6";
+    width: 100%;
+    position: $position;
+    margin: 0 auto;
+    gap: $med-secundaria;
+
+    @include mobile{
+    display: grid;
+    width: 100%;
+    margin: $med-primaria auto;
+    }
+
+    @include mobile1{
+        display: block;
+        margin: auto;
+        width: 80%;
+    }
+
+.caja1{
+    grid-area: caja1;
+    border-radius: 5%;
+    animation: slide-in-left 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+    @keyframes slide-in-left {
+            0% {
+                -webkit-transform: translateX(-1000px);
+                transform: translateX(-1000px);
+                opacity: 0;
+            } 
+            100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            opacity: 1;
+            }
+        }
+
+
+.caja2{
+    grid-area: caja2;
+    border-radius: 5%;
+    animation: slide-in-right 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+    @keyframes slide-in-right {
+            0% {
+            -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+            opacity: 0;
+            }
+            100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            opacity: 1;
+            }
+        }
+
+
+.caja3{
+    grid-area: caja3;
+    border-radius: 5%;
+    animation: slide-in-left 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes slide-in-left {
+            0% {
+                -webkit-transform: translateX(-1000px);
+                transform: translateX(-1000px);
+                opacity: 0;
+            } 
+            100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            opacity: 1;
+            }
+        }
+
+.caja4{
+    grid-area: caja4;
+border-radius: 5%;
+    animation: slide-in-right 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+    @keyframes slide-in-right {
+            0% {
+            -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+            opacity: 0;
+            }
+            100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            opacity: 1;
+            }
+        }
+
+.caja5{
+    grid-area: caja5;
+    border-radius: 5%;
+    animation: slide-in-left 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes slide-in-left {
+            0% {
+                -webkit-transform: translateX(-1000px);
+                transform: translateX(-1000px);
+                opacity: 0;
+            } 
+            100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            opacity: 1;
+            }
+}
+
+.caja6{
+    grid-area: caja6;
+border-radius: 5%;
+    animation: slide-in-right 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+    @keyframes slide-in-right {
+            0% {
+            -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+            opacity: 0;
+            }
+            100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            opacity: 1;
+            }
+        }
+    }
+
+/*page3*/
+
+.noticias{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: $med-secundaria;
+    padding: $med-secundaria;
+    margin: auto;
+    width: 100%;
+    align-items: center;
+}
+
+/*Comerciantes*/
+
+.comerciantes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: $med-secundaria;
+    padding: $med-secundaria;
+    margin: auto;
+    width: 100%;
+    align-items: center;
+}
+
+.servicio{
+    background-color: #ffffff;
+    border-radius: $border-radius;
+
+    @include flex1(column, center, center);
+
+    margin: auto;
+    padding: $med-secundaria;
+    border: solid black;
+    font-family: $font-texto;
+    
+    img{
+    border-radius: $border-radius1;
+    height: 10rem;
+    width: 10rem;
+}
+
+    h2{
+    font-size: $med-textoinicio;
+}
+
+    p{
+    font-size: $med-secundaria;
+}
+}
+
+
+/*page4*/
+
+
+.page4{
+
+    @include flex1(column, center, center);
+
+    .item{
+    font-size: $med-title2;
+    color: $color-item;
+    align-content: center;
+
+    @include mobile1{
+        font-size: $med-cuarta;
+    }
+    }
+
+    .text{
+    font-size: $med-cuarta;
+    color: $color-item;
+    
+    @include mobile1{
+        font-size: $med-terciaria;
+    }
+    }
+}
+
+.fotofinal{
+    background-image: url(../img/final.webp);
+    background-repeat: no-repeat;
+    background-size: $object-fit-size;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    position: $position;
+
+    @include mobile{
+        height: 60vh;
+    }
+}
+

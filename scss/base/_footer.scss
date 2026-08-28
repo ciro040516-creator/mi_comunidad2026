@@ -1,0 +1,27 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+
+footer{
+    background-image: linear-gradient(to top, #b3ffab 0%, #12fff7 100%);
+    padding: $med-terciaria;
+
+    @include mobile1{
+        padding: $med-secundaria;
+    }
+
+.textofooter{
+    font-size: $med-secundaria;
+    text-align: $text-align;
+    padding: $med-primaria;
+    font-family: $font-texto;
+
+    @include mobile1{
+        font-size: $med-varias;
+    }
+}
+
+.opensans{
+    font-family: $font-texto;
+}
+}

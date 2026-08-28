@@ -1,0 +1,14 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+
+.nav-underline{
+    font-size: $med-terciaria;
+
+    @include mobile{
+        font-size: $med-secundaria;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+}

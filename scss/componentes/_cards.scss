@@ -1,0 +1,60 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+
+.card{
+    background-color: $color-card;
+    border-radius: $border-radius;
+    overflow: $deco-card;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+
+/* Sección de la imagen */
+.noti-img {
+    position: $position;
+    height: 10rem;
+    width: 100%;
+
+    img {
+    width: 100%;
+    height: 100%;
+    object-fit: $object-fit-size;
+}
+}
+
+/* Bloque de texto interno */
+.contenido{
+    padding: $med-terciaria;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    font-family: $font-title;
+
+    h2 {
+    font-size: $med-secundaria;
+    color: black;
+    margin-bottom: $med-secundaria;
+    line-height: 1.4;
+    }
+
+    p{
+    font-size: $med-textseccion;
+    color: $color-contenidop;
+    line-height: 1.6;
+    margin-bottom: $med-terciaria;
+    }
+}
+
+.fecha {
+    font-size: $med-textseccion;
+    color: #888888;
+    margin-bottom: $med-secundaria;
+}
+}

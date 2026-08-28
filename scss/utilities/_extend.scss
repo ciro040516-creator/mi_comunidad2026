@@ -1,0 +1,33 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+%cortesia-p{
+            font-size: $med-varias;
+            font-family: $font-texto;
+
+            @include mobile{
+                font-size: $med-secundaria;
+            }
+
+            @include mobile1{
+                font-size: $med-primaria;
+            }
+        }
+
+%link-enlace{
+    font-size: $med-varias;
+    font-weight: $font-weight;
+    color: $color-link;
+    font-family: $font-texto;
+
+    &:hover{
+                transform: scale(1.1);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
+                z-index: 10;
+            }
+    
+    @include mobile1{
+        font-size: 0.6rem;
+    }
+}
+
