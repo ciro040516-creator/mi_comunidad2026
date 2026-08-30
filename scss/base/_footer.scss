@@ -6,8 +6,9 @@ footer{
     background-image: linear-gradient(to top, #b3ffab 0%, #12fff7 100%);
     padding: $med-terciaria;
 
-    @include mobile1{
+    @include tablet{
         padding: $med-secundaria;
+        margin-top: 2.5rem;
     }
 
 .textofooter{

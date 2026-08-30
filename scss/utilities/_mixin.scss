@@ -7,6 +7,18 @@
     align-items: $align-items; /* Alinea todo al centro */
 }
 
+@mixin tablet{
+    @media (max-width: $med-tablet) {
+        @content;
+    }
+}
+
+@mixin mobilehoriz{
+    @media (max-height: $med-mobilehoriz) and (orientation: landscape) {
+        @content;
+    }
+}
+
 @mixin mobile{
     @media (max-width: $med-mobile) {
         @content;

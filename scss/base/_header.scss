@@ -7,8 +7,9 @@
 header{
     background-image: linear-gradient(to top, #b3ffab 0%, #12fff7 100%);
     padding: $med-cuarta;
-    
-    @include mobile1{
+
+    @include tablet{
+        max-width: auto;
         padding: auto;
     }
 }

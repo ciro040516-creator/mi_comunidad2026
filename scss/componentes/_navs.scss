@@ -5,7 +5,7 @@
 .nav-underline{
     font-size: $med-terciaria;
 
-    @include mobile{
+    @include tablet{
         font-size: $med-secundaria;
         display: flex;
         flex-direction: column;
