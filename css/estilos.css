@@ -55,14 +55,27 @@ body {
   }
 }
 
-header {
+nav {
   background-image: linear-gradient(to top, #b3ffab 0%, #12fff7 100%);
   padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 @media (max-width: 1024px) {
-  header {
+  nav {
     max-width: auto;
     padding: auto;
+  }
+}
+nav iframe {
+  border-radius: 100%;
+  max-width: 20rem;
+}
+@media (max-width: 768px) {
+  nav iframe {
+    max-width: 10rem;
   }
 }
 

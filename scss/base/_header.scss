@@ -4,13 +4,26 @@
 @use "../componentes/navs" as *;
 
 
-header{
+nav{
     background-image: linear-gradient(to top, #b3ffab 0%, #12fff7 100%);
     padding: $med-cuarta;
+    display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
 
     @include tablet{
         max-width: auto;
         padding: auto;
+    }
+
+    iframe{
+        border-radius: 100%;
+        max-width: 20rem;
+
+        @include mobile{
+            max-width: 10rem;
+        }
     }
 }
 
